@@ -38,7 +38,7 @@ header
 
 /* my portfolio */
 .mp{
-    color: #ff7200;
+    color:rgb(143, 18, 210);;
     font-size: 45px;
     font-family: fantasy;
     /* font-style: italic; */
@@ -70,7 +70,7 @@ header
     transition: 0.4s ease-in-out;
 }
 .menu a:hover{
-    color: #ff7200;
+    color:rgb(118, 7, 118);
 }
 
 /* .about_me{
@@ -106,7 +106,7 @@ header
     gap: 1em;
     transition: 0.4s ease-in-out;
     font-size: 21px;
-    background-color:orangered;
+    background-color:rgb(118, 7, 118);
     text-decoration: none;
     color: #FFF;
     padding: 10px;
@@ -148,18 +148,36 @@ header
     height: 5px;
     border-width: 100px;
 } */
-.Hero h1{
-    color: #9d9b4f;
-    margin-top: 20px;
-    margin-left: 20px;
-    width: fit-content  ;
-    font-stretch: ultra-expanded;
-    text-decoration:turquoise;
-    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
-    font-size: 120px;
-    letter-spacing: 10px;
-    font-family: "Ubuntu", sans-serif;
+@keyframes colorChange {
+    0% { color: #9d9b4f; }  /* Olive */
+    25% { color: #ff5733; } /* Orange */
+    50% { color: #3498db; } /* Blue */
+    75% { color: #ff33bb; } /* Pink */
+    100% { color: #9d9b4f; } /* Back to Olive */
 }
+
+.animated-name {
+    display: flex;
+    font-size: 120px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.animated-name span {
+    animation: colorChange 3s infinite alternate;
+    display: inline-block;
+}
+
+/* Apply different animation delay to each letter */
+.animated-name span:nth-child(1) { animation-delay: 0s; }
+.animated-name span:nth-child(2) { animation-delay: 0.2s; }
+.animated-name span:nth-child(3) { animation-delay: 0.4s; }
+.animated-name span:nth-child(4) { animation-delay: 0.6s; }
+.animated-name span:nth-child(5) { animation-delay: 0.8s; }
+.animated-name span:nth-child(6) { animation-delay: 1s; }
+.animated-name span:nth-child(7) { animation-delay: 1.2s; }
+
 
 .Hero h1:hover{
     color: orangered;
@@ -251,7 +269,7 @@ div .sub{
     margin-top: 160px;
     gap: 10px;
     padding: 20px;
-    color:orangered;
+    color:rgb(143, 18, 210);;
 }
 
 .socialicons a i:hover{
@@ -259,7 +277,7 @@ div .sub{
 }
 
 .footercontainer .sub p{
-    color: #f02727;
+    color: rgb(143, 18, 210);;
     /* margin-left: -1150px; */
 }
 
@@ -385,7 +403,7 @@ img{
 h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #fff;
+    color:rgb(143, 18, 210);;
 }
 
 .grid {
@@ -417,7 +435,8 @@ h2 {
 }
 
 .card p {
-    font-size: 1rem;
+    font-size: 17px;
+    
 }
 
 
@@ -429,8 +448,8 @@ h2 {
     padding: 2rem;
     max-width: 900px;
     margin-top: -300px;
-    border-left: 2px solid  orangered;
-    border-top: 2px solid  orangered
+    border-left: 2px solid  rgb(143, 18, 210);;
+    border-top: 2px solid  rgb(143, 18, 210);;
 
     
 }
