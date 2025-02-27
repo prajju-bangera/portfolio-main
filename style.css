@@ -608,8 +608,13 @@ h2 {
     }
 
     .Hero h1 {
-        font-size: 80px;
-        letter-spacing: 5px;
+        font-size: 90px;
+        margin-left: 16%;
+    }
+
+    .Hero-right img {
+        width: 100%;
+
     }
 
     .Hero-right {
@@ -720,11 +725,13 @@ h2 {
     }
 
     .Hero h1 {
-        font-size: 40px;
+        font-size: 90px;
+        margin-left: 16%;
     }
 
     .Hero-right img {
-        width: 60%;
+        width: 100%;
+
     }
 
     .resume {
