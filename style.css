@@ -632,7 +632,7 @@ h2 {
         align-items: center;
         text-align: center;
     }
-
+    
     .resume {
         margin-left: 0;
         width: 100px;
@@ -649,18 +649,19 @@ h2 {
     }
 
     .Hero h1 {
-        font-size: 60px;
+        font-size: 90px;
+        margin-left: 16%;
         letter-spacing: 2px;
     }
 
     .Hero-right img {
-        width: 80%;
+        width: 100%;
     }
 
     .intro-section {
         flex-direction: column;
         text-align: center;
-        margin-left: 0;
+        margin-left: 10px;
         padding: 1rem;
         border: none;
     }
@@ -686,11 +687,13 @@ h2 {
     }
 
     .Hero h1 {
-        font-size: 50px;
+        font-size: 90px;
+        margin-left: 16%;
     }
 
     .Hero-right img {
-        width: 70%;
+        width: 100%;
+
     }
 
     .resume {
