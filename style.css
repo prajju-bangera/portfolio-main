@@ -50,7 +50,7 @@ header
     font-size: 45px;
     font-family: fantasy;
     /* font-style: italic; */
-    margin-left: -10px;
+   
     
 }
 
@@ -64,18 +64,23 @@ header
 /* about menu */
 .menu{
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    gap: 50px;
-    margin-left:370px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-left:60px;
 }
 
+.navbar{
+    margin-left: 200px;
+    display: flex;
+}
 .menu a{
     text-decoration: none;
     color: antiquewhite;
     font-weight: bold;
     font-size: 25px;
     transition: 0.4s ease-in-out;
+    margin-left: 30px;
 }
 .menu a:hover{
     color:rgb(118, 7, 118);
