@@ -24,17 +24,24 @@ body{
 header
 {
     display: flex;
-    width: 100vw;
-    justify-content: space-evenly;  
+    width: 100%;
     align-items: center;
-    /* gap: 10em; */
-    /* z-index:10; */
     background-color: black;
-    position:sticky;
+    position: sticky;
     top: 0;
-    padding: 20px;
+    padding: 30px 8%;
+    z-index: 1000;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        margin-left: 0;  /* Removes margin to prevent misalignment */
+    }
+}
 
 
 /* my portfolio */
@@ -112,7 +119,7 @@ header
     color: #FFF;
     padding: 10px;
     border-radius: 4px;
-    margin-left: 400px;
+    margin-left: 300px;
     width: 180px;
 }
 
