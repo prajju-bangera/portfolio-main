@@ -144,6 +144,43 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="form-container">
+                <form id="myForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+        
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+        
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your Message" required></textarea>
+        
+                    <button type="submit">Submit <span>➤</span></button>
+                </form>
+            </div>
+        
+            <script>
+                document.getElementById('myForm').addEventListener('submit', async function(event) {
+                    event.preventDefault();
+                    
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        message: document.getElementById('message').value
+                    };
+        
+                    const response = await fetch('/submit', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData)
+                    });
+        
+                    const result = await response.json();
+                    alert(result.message);
+                });
+            </script>
+        </section>
         
         <section class="work" id="work">
             <!-- <h2>MY CERTIFICATE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></h2> -->
