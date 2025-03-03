@@ -729,12 +729,12 @@ button span {
         flex-direction: column;
         text-align: center;
    
-        margin-left: 81px;
+        margin-left: 25px;
     
     }
 
     .Hero-left {
-        margin-top: 50px;
+        margin-top: 100px;
     }
 
     .Hero h1 {
@@ -806,6 +806,7 @@ button span {
     .hero {
         margin: 0 auto;
         text-align: center;
+        margin-left: 25px;
     }
 
     .Hero h1 {
@@ -832,7 +833,7 @@ button span {
     }
 
     .Hero-right img {
-        max-width: 90%;
+        width: 100%;
         height: auto;
         display: block;
         margin: 0 auto;
@@ -872,16 +873,23 @@ button span {
 
     .Hero h1 {
         font-size: 90px;
-        margin-left: 16%;
+        margin-left: -2%;
+        margin-top: 10px;
     }
     .sub p{
-        margin-top: -90px;
+        margin-top: 200px;
     }
     .Hero-right img {
         width: 100%;
-
+    }
+    .Hero-right{
+        margin-top: -850px;
     }
     
+   
+    .Hero-left{
+        margin-top:370px;
+    }
     .resume {
         font-size: 14px;
         width: 80px;
@@ -894,7 +902,12 @@ button span {
     .intro-text p {
         font-size: 0.8rem;
     }
-
+    .abt{
+        margin-top: 370px;
+    }
+    .intro-section{
+        margin-top: -370px;
+    }
     .outer-circle {
         width: 250px;
         height: 250px;
