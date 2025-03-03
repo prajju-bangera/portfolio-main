@@ -256,7 +256,8 @@ div .sub{
 
 .abt h1{
     color: #ffffff;
-    height: 500px;
+    height: 280px;
+    
 }
 
 .contact{
@@ -300,8 +301,16 @@ div .sub{
 .footercontainer .socialicons a i{
     margin-left: 2px;
     width: 80px;
+    animation: shake 0.5s infinite alternate ease-in-out;
 }
 
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-2deg); }
+    50% { transform: translateX(5px) rotate(2deg); }
+    75% { transform: translateX(-3px) rotate(-1deg); }
+    100% { transform: translateX(3px) rotate(1deg); }
+}
 .download-btn {
     /* background-color:rgb(143, 18, 210); */
     border: none;
@@ -420,14 +429,13 @@ img{
 }
 
 
-
 .tech-banner {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem;
-    margin-top: -400px
+    margin-top: 90px;
 }
 
 .section {
@@ -484,24 +492,57 @@ h2 {
 .intro-section {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 0rem;
     margin-left: 500px;
     padding: 2rem;
-    max-width: 900px;
-    margin-top: -300px;
+    max-width: 1050px;
+    margin-top: -100px;
     border-left: 2px solid  rgb(143, 18, 210);;
     border-top: 2px solid  rgb(143, 18, 210);;
 
     
 }
+.logo {
+    width: 270px;
+    height: 240px;
+    margin-left: -300px;
+    background: url('img.png') no-repeat center;
+    background-size: cover;
+    position: relative;
+    /* border: 5px solid red; */
+    animation: shake 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-2deg); }
+    50% { transform: translateX(5px) rotate(2deg); }
+    75% { transform: translateX(-3px) rotate(-1deg); }
+    100% { transform: translateX(3px) rotate(1deg); }
+}
+
+/* @keyframes borderColorChange {
+    0% { border-color: red; }
+    25% { border-color: blue; }
+    50% { border-color: green; }
+    75% { border-color: yellow; }
+    100% { border-color: purple; }
+} */
+
+
+
 .lineAboutStart{
     margin-left:50%;
 
 }
 .lineAboutEnd{
     margin-left:50%;
+   
 }
 
+#skill{
+    margin-top: -200px;
+}
 .profile-image img {
     width: 150px;
     height: 150px;
@@ -512,7 +553,8 @@ h2 {
 }
 
 .intro-text {
-    max-width: 600px;
+    width: 900px;
+    margin-left: 90px;
    
 
     
@@ -524,9 +566,10 @@ h2 {
 }
 
 .intro-text p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     margin: 0.5rem 0;
+    min-width: 800px;
 
 }
 
@@ -668,7 +711,7 @@ button span {
 
 
 /* Make the layout responsive */
-@media screen and (max-width: 1558px) {
+@media screen and (max-width: 1200px) {
     .menu {
         margin-left: 200px;
         gap: 30px;
@@ -758,6 +801,7 @@ button span {
     .tech-banner {
         gap: 1rem;
         padding: 1rem;
+        
     }
 
     .section {
@@ -867,11 +911,7 @@ button span {
 
 
 @media screen and (max-width: 480px) {
-    body{
-        padding-left: -15px;
-        padding-right: -15px;
-
-    }
+   
     .mp {
         font-size: 28px;
     }
@@ -890,7 +930,6 @@ button span {
     .Hero-right{
         margin-top: -850px;
     }
-    
    
     .Hero-left{
         margin-top:370px;
@@ -900,6 +939,10 @@ button span {
         width: 80px;
     }
 
+    .logo{
+        margin-left: 0px;
+    }
+   
     .intro-text h2 {
         font-size: 1.2rem;
     }
@@ -911,7 +954,11 @@ button span {
         margin-top: 370px;
     }
     .intro-section{
-        margin-top: -370px;
+        margin-top: -246px;
+   
+    }
+    .intro-text{
+        margin-left: 50px;
     }
     .outer-circle {
         width: 250px;
