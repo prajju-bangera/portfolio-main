@@ -668,7 +668,7 @@ button span {
 
 
 /* Make the layout responsive */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1558px) {
     .menu {
         margin-left: 200px;
         gap: 30px;
@@ -867,6 +867,11 @@ button span {
 
 
 @media screen and (max-width: 480px) {
+    body{
+        padding-left: -15px;
+        padding-right: -15px;
+
+    }
     .mp {
         font-size: 28px;
     }
