@@ -9,15 +9,19 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Serve static files (index.html)
-app.use(express.static(path.join(__dirname, 'public')));
+// ✅ Serve Static Files from Frontend Folder
+const publicPath = path.join(__dirname, '../frontend'); // Adjust the path
+app.use(express.static(publicPath));
 
-// Connect to MongoDB 
+console.log("✅ Serving static files from:", publicPath);
+console.log("✅ Looking for index.html at:", path.join(publicPath, 'index.html'));
+
+// ✅ Ensure MongoDB Connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('✅ MongoDB Connected'))
     .catch(err => console.error('❌ MongoDB Connection Error:', err));
 
-// Define Schema & Model
+// ✅ Define Schema & Model
 const formSchema = new mongoose.Schema({
     name: String,
     email: String,
@@ -25,7 +29,7 @@ const formSchema = new mongoose.Schema({
 });
 const Form = mongoose.model('Form', formSchema);
 
-// Handle form submission
+// ✅ Handle Form Submission
 app.post('/submit', async (req, res) => {
     try {
         const { name, email, message } = req.body;
@@ -38,6 +42,16 @@ app.post('/submit', async (req, res) => {
     }
 });
 
-// Start server
+// ✅ Serve index.html explicitly
+app.get('*', (req, res) => {
+    res.sendFile(path.join(publicPath, 'index.html'), (err) => {
+        if (err) {
+            console.error("❌ Error serving index.html:", err);
+            res.status(500).send("Error loading the page.");
+        }
+    });
+});
+
+// ✅ Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running at http://localhost:${PORT}`));
