@@ -239,20 +239,27 @@ div .sub{
     overflow:hidden;
     cursor: pointer;
 }
-.outer-circle{
+.outer-circle {
     width: 500px;
     height: 500px;
-    background-color: rgba(77,77,77,0.46);
-    display:flex;
-    justify-content:baseline;
-    border: 5px;
-     border-style:outset;
-    border-color: rgb(255, 0, 0);
-    /* align-items: center; */
+    display: flex;
+    justify-content: baseline;
+    border: 5px outset rgb(255, 0, 0);
     margin: 15px;
     margin-top: 60px;
-
+    background-color: rgba(77, 77, 77, 0.46);
+    
+    /* Add glow animation */
+    animation: glowing 2s infinite alternate;
 }
+
+/* Keyframes for glow effect */
+@keyframes glowing {
+    0% { box-shadow: 0 0 10px red; }
+    50% { box-shadow: 0 0 20px orange; }
+    100% { box-shadow: 0 0 30px yellow; }
+}
+
 
 
 .abt h1{
