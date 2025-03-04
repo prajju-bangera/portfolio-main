@@ -17,14 +17,11 @@ console.log("✅ Serving static files from:", publicPath);
 console.log("✅ Looking for index.html at:", path.join(publicPath, 'index.html'));
 
 // ✅ Ensure MongoDB Connection
-const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/PortfolioMessage";
+const mongoURI = process.env.MONGO_URI;
 
-mongoose.connect(mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-.then(() => console.log("MongoDB Connected"))
-.catch(err => console.error("MongoDB Connection Error:", err));
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("✅ MongoDB Connected Successfully!"))
+  .catch(err => console.error("❌ MongoDB Connection Error:", err));
 
 // ✅ Define Schema & Model
 const formSchema = new mongoose.Schema({
