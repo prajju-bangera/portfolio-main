@@ -17,7 +17,7 @@ console.log("✅ Serving static files from:", publicPath);
 console.log("✅ Looking for index.html at:", path.join(publicPath, 'index.html'));
 
 // ✅ Ensure MongoDB Connection
-const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/mydatabase";
+const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/PortfolioMessage";
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
